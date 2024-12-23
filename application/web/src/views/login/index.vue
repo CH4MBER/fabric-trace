@@ -229,7 +229,7 @@ $cursor: #fff;
 /* reset element-ui css */
 .login-container {
   // 添加背景图片
-  background-image: url("../../assets/login_images/nature.jpg");
+  background-image: url("../../assets/login_images/medicine.jpg");
   background-size: cover;
   background-position: center;
 
