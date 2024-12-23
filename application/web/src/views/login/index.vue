@@ -135,8 +135,8 @@ export default {
         userType: ''
       },
       options: [{
-        value: '工厂',
-        label: '工厂'
+        value: '制药厂',
+        label: '制药厂'
       }, {
         value: '仓库',
         label: '仓库'

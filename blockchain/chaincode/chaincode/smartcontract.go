@@ -70,8 +70,8 @@ func (s *SmartContract) Uplink(ctx contractapi.TransactionContextInterface, user
 	fruit.Traceability_code = traceability_code
 	// 不同用户类型的上链的参数不一致
 	switch userType {
-	// 工厂
-	case "工厂":
+	// 制药厂
+	case "制药厂":
 		// 将传入的农产品上链信息转换为Farmer_input结构体
 		fruit.Farmer_input.Fa_fruitName = arg1
 		fruit.Farmer_input.Fa_origin = arg2

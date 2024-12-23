@@ -17,7 +17,7 @@ type User struct {
 /*
 定义农产品结构体
 溯源码
-工厂输入
+制药厂输入
 仓库输入
 运输司机输入
 药店输入
@@ -39,13 +39,13 @@ type HistoryQueryResult struct {
 }
 
 /*
-工厂
+制药厂
 农产品的溯源码，一物一码，主打高端市场（自动生成）
 药品名称
 产地
 生产时间
 出厂时间
-工厂名称
+制药厂名称
 */
 type Farmer_input struct {
 	Fa_fruitName   string `json:"fa_fruitName"`

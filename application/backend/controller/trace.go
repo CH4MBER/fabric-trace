@@ -105,8 +105,8 @@ func buildArgs(c *gin.Context, farmer_traceability_code string) []string {
 	userType, _ := pkg.ChaincodeQuery("GetUserType", userID.(string))
 	args = append(args, userID.(string))
 	fmt.Print(userID)
-	// 工厂不需要输入溯源码，其他用户需要，通过雪花算法生成ID
-	if userType == "工厂" {
+	// 制药厂不需要输入溯源码，其他用户需要，通过雪花算法生成ID
+	if userType == "制药厂" {
 		args = append(args, farmer_traceability_code)
 	} else {
 		// 检查溯源码是否正确

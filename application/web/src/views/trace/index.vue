@@ -23,7 +23,7 @@
             <el-form-item label="出厂时间：">
               <span>{{ props.row.farmer_input.fa_pickingTime }}</span>
             </el-form-item>
-            <el-form-item label="工厂名称：">
+            <el-form-item label="制药厂名称：">
               <span>{{ props.row.farmer_input.fa_farmerName }}</span>
             </el-form-item>
             <el-form-item label="区块链交易ID：">

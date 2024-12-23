@@ -6,11 +6,11 @@
     </div>
     <div>
       <el-form ref="form" :model="tracedata" label-width="80px" size="mini" style="">
-        <el-form-item v-show="userType!='工厂'&userType!='消费者'" label="溯源码:" style="width: 300px" label-width="120px">
+        <el-form-item v-show="userType!='制药厂'&userType!='消费者'" label="溯源码:" style="width: 300px" label-width="120px">
           <el-input v-model="tracedata.traceability_code" />
         </el-form-item>
 
-        <div v-show="userType=='工厂'">
+        <div v-show="userType=='制药厂'">
           <el-form-item label="药品名称:" style="width: 300px" label-width="120px">
             <el-input v-model="tracedata.Farmer_input.Fa_fruitName" />
           </el-form-item>
@@ -23,7 +23,7 @@
           <el-form-item label="出厂时间:" style="width: 300px" label-width="120px">
             <el-input v-model="tracedata.Farmer_input.Fa_pickingTime" />
           </el-form-item>
-          <el-form-item label="工厂名称:" style="width: 300px" label-width="120px">
+          <el-form-item label="制药厂名称:" style="width: 300px" label-width="120px">
             <el-input v-model="tracedata.Farmer_input.Fa_farmerName" />
           </el-form-item>
         </div>
@@ -150,7 +150,7 @@ export default {
       formData.append('traceability_code', this.tracedata.traceability_code)
       // 根据不同的用户给arg1、arg2、arg3..赋值,
       switch (this.userType) {
-        case '工厂':
+        case '制药厂':
           formData.append('arg1', this.tracedata.Farmer_input.Fa_fruitName)
           formData.append('arg2', this.tracedata.Farmer_input.Fa_origin)
           formData.append('arg3', this.tracedata.Farmer_input.Fa_plantTime)
