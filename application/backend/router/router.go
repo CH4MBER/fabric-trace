@@ -48,7 +48,7 @@ func SetupRouter() *gin.Engine {
 	r.POST("/getFruitInfo", con.GetFruitInfo)
 	// 获取用户的农产品ID列表
 	r.POST("/getFruitList", middleware.JWTAuthMiddleware(), con.GetFruitList)
-	// 获取所有的农产品信息
+	// 获取所有的药品信息
 	r.POST("/getAllFruitInfo", middleware.JWTAuthMiddleware(), con.GetAllFruitInfo)
 	// 获取农产品上链历史(溯源)
 	r.POST("/getFruitHistory", middleware.JWTAuthMiddleware(), con.GetFruitHistory)

@@ -66,12 +66,12 @@ func (s *SmartContract) Uplink(ctx contractapi.TransactionContextInterface, user
 
 	// 获取交易ID
 	txid := ctx.GetStub().GetTxID()
-	// 给农产品信息中加上溯源码
+	// 给药品信息中加上溯源码
 	fruit.Traceability_code = traceability_code
 	// 不同用户类型的上链的参数不一致
 	switch userType {
-	// 种植户
-	case "种植户":
+	// 工厂
+	case "工厂":
 		// 将传入的农产品上链信息转换为Farmer_input结构体
 		fruit.Farmer_input.Fa_fruitName = arg1
 		fruit.Farmer_input.Fa_origin = arg2
@@ -80,8 +80,8 @@ func (s *SmartContract) Uplink(ctx contractapi.TransactionContextInterface, user
 		fruit.Farmer_input.Fa_farmerName = arg5
 		fruit.Farmer_input.Fa_Txid = txid
 		fruit.Farmer_input.Fa_Timestamp = time
-	// 工厂
-	case "工厂":
+	// 仓库
+	case "仓库":
 		// 将传入的农产品上链信息转换为Factory_input结构体
 		fruit.Factory_input.Fac_productName = arg1
 		fruit.Factory_input.Fac_productionbatch = arg2
@@ -100,8 +100,8 @@ func (s *SmartContract) Uplink(ctx contractapi.TransactionContextInterface, user
 		fruit.Driver_input.Dr_transport = arg5
 		fruit.Driver_input.Dr_Txid = txid
 		fruit.Driver_input.Dr_Timestamp = time
-	// 商店
-	case "商店":
+	// 药店
+	case "药店":
 		// 将传入的农产品上链信息转换为Shop_input结构体
 		fruit.Shop_input.Sh_storeTime = arg1
 		fruit.Shop_input.Sh_sellTime = arg2
@@ -235,7 +235,7 @@ func (s *SmartContract) GetFruitList(ctx contractapi.TransactionContextInterface
 	return user.FruitList, nil
 }
 
-// 获取所有的农产品信息
+// 获取所有的药品信息
 func (s *SmartContract) GetAllFruitInfo(ctx contractapi.TransactionContextInterface) ([]Fruit, error) {
 	fruitListAsBytes, err := ctx.GetStub().GetStateByRange("", "")
 	if err != nil {

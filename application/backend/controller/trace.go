@@ -67,7 +67,7 @@ func GetFruitList(c *gin.Context) {
 	})
 }
 
-// 获取所有的农产品信息
+// 获取所有的药品信息
 func GetAllFruitInfo(c *gin.Context) {
 	res, err := pkg.ChaincodeQuery("GetAllFruitInfo", "")
 	fmt.Print("res", res)
@@ -105,8 +105,8 @@ func buildArgs(c *gin.Context, farmer_traceability_code string) []string {
 	userType, _ := pkg.ChaincodeQuery("GetUserType", userID.(string))
 	args = append(args, userID.(string))
 	fmt.Print(userID)
-	// 种植户不需要输入溯源码，其他用户需要，通过雪花算法生成ID
-	if userType == "种植户" {
+	// 工厂不需要输入溯源码，其他用户需要，通过雪花算法生成ID
+	if userType == "工厂" {
 		args = append(args, farmer_traceability_code)
 	} else {
 		// 检查溯源码是否正确
