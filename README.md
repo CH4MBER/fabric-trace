@@ -18,12 +18,12 @@ Fabric V2.5通用溯源课程活动：[【腾讯文档】：提交源码仓库�
 
 ![TrueTechLabs Fabric学习交流QQ群：776873343](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgoimg202403062054644.jpg)
 #### 一、项目介绍
-基于区块链Hyperledger Fabric V2.5的农产品溯源/商品/通用溯源应用模板，部署简单，附压测工具tape、区块链浏览器，文档详细。可以快速使用本系统搭建自己的溯源系统，帮助想法快速落地。采用的技术栈：Fabric V2.5、Gin、Vue.js、Mysql。
+基于区块链Hyperledger Fabric V2.5的药品溯源/商品/通用溯源应用模板，部署简单，附压测工具tape、区块链浏览器，文档详细。可以快速使用本系统搭建自己的溯源系统，帮助想法快速落地。采用的技术栈：Fabric V2.5、Gin、Vue.js、Mysql。
 
 ![项目系统架构图](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgo319183738-60337eb8-1799-435f-b0a5-8ac61761aa28.png)
 ![多类型用户注册](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgo202404151236356.jpg)
 ![农产品上链](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgo202404151238978.png)
-![农产品溯源](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgo202404151238196.png)
+![药品溯源](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgo202404151238196.png)
 ![区块链浏览器可视化](https://truetechlabs-1259203851.cos.ap-shanghai.myqcloud.com/picgo202404151239574.png)
 
 ##### 项目地址：
@@ -56,7 +56,7 @@ Fabric V2.5通用溯源课程活动：[【腾讯文档】：提交源码仓库�
 项目结构清晰，代码注释详细，方便二次开发。结合了mysql实现账户注册登录功能，更符合真实业务场景。
 
 #### 四、项目背景
-区块链技术的出现，为溯源系统的建设提供了新的思路。区块链技术的不可篡改性、去中心化、可追溯等特点，使得区块链技术成为溯源系统的理想选择。本项目基于Hyperledger Fabric V2.5，实现了一个农产品溯源系统。 在本区块链系统中，有5个内置的角色：工厂、仓库、驾驶员、药店、消费者。其中工厂、仓库、驾驶员、药店可以将信息上链，消费者有信息溯源权限。上述可以上链信息的角色各可以输入5个农产品的属性，方便二次开发。本项目的目标是作为Fabric V2.5下的一个通用溯源模板。
+区块链技术的出现，为溯源系统的建设提供了新的思路。区块链技术的不可篡改性、去中心化、可追溯等特点，使得区块链技术成为溯源系统的理想选择。本项目基于Hyperledger Fabric V2.5，实现了一个药品溯源系统。 在本区块链系统中，有5个内置的角色：工厂、仓库、驾驶员、药店、消费者。其中工厂、仓库、驾驶员、药店可以将信息上链，消费者有信息溯源权限。上述可以上链信息的角色各可以输入5个农产品的属性，方便二次开发。本项目的目标是作为Fabric V2.5下的一个通用溯源模板。
 
 #### 五、搭建步骤
 > 如果部分内容与视频不一致请以本文档为准
